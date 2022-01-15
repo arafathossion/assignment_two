@@ -1,15 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box !important;
-  scroll-behavior: smooth
-}
 /* Main Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 /* Item Font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 /* Footer Font */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+/*==============
+01.BASIC
+================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  scroll-behavior: smooth
+}
 :root {
   --white: white;
   --dark-gray: #3a3a3a;
@@ -21,20 +24,11 @@
   --footer-font: "Manrope", sans-serif;
   --transform: 0.6s all linear;
 }
-#nav-toggler{
-  display: none;
-}
-.nav-toggler-icon{
-  display: none;
-  color: var(--dark-gray);
-  font-size: 30px;
-}
-.nav-toggler-icon i{
-  color: black;
-}
 body {
   border: 1px solid #000;
+  overflow-x: hidden;
 }
+
 .pb-40 {
   padding-bottom: 40px;
 }
@@ -47,11 +41,10 @@ h1 {
   color: var(--dark-gray);
   font-size: calc(50px + 1vmin);
 }
-h4,
 h4 {
   color: var(--dark-gray);
   text-align: center;
-  font-size: calc(26.9673px + 1vmin); /* font-size: 28px; */
+  font-size: calc(20px + 1vmin); /* font-size: 28px; */
   font-family: var(--main-font);
   font-weight: 600;
   text-transform: capitalize;
@@ -59,7 +52,7 @@ h4 {
 span {
   font-family: var(--other-font) !important;
   font-weight: 400;
-  font-size: calc(22.9673px + 1vmin); /* font-size: 24px; */
+  font-size: calc(18px + 1vmin); /* font-size: 24px; */
   color: rgba(0, 0, 0, 0.87);
   padding: 6px 0 8px 0;
   display: block;
@@ -72,6 +65,10 @@ main {
   margin: auto;
   max-width: 1200px;
 }
+
+/*==============
+ 02.BANNER
+================*/
 header {
   padding: 10px 0 0 20px;
   display: grid;
@@ -91,6 +88,17 @@ nav{
   justify-content: end;
   align-items: center !important;
 }
+#nav-toggler{
+  display: none;
+}
+.nav-toggler-icon{
+  display: none;
+  color: var(--dark-gray);
+  font-size: 30px;
+}
+.nav-toggler-icon i{
+  color: black;
+}
 nav ul {
   list-style: none;
   display: flex;
@@ -105,10 +113,29 @@ nav ul li a {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  transition: var(--transform);
+  -webkit-transition: var(--transform);
+  -moz-transition: var(--transform);
+  -ms-transition: var(--transform);
+  -o-transition: var(--transform);
+}
+nav ul li a:hover{
+  color: #e02c6d;
+  font-size: calc(15px);
+  font-weight: 600;
 }
 .fa-cart-plus {
   padding-top: 12px;
   color: var(--dark-gray);
+  transition: var(--transform);
+  -webkit-transition: var(--transform);
+  -moz-transition: var(--transform);
+  -ms-transition: var(--transform);
+  -o-transition: var(--transform);
+}
+.fa-cart-plus:hover{
+  color: #e02c6d;
+  font-weight: bolder;
 }
 #banner {
   display: grid;
@@ -178,15 +205,25 @@ nav ul li a {
   z-index: 1;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  top: 5%;
+  left: 5%;
+  transition: var(--transform);
+  -webkit-transition: var(--transform);
+  -moz-transition: var(--transform);
+  -ms-transition: var(--transform);
+  -o-transition: var(--transform);
 }
-
+.banner-right img:nth-child(2):hover{
+ transform: rotate(-90deg);
+ -webkit-transform: rotate(-90deg);
+ -moz-transform: rotate(-90deg);
+ -ms-transform: rotate(-90deg);
+ -o-transform: rotate(-90deg);
+ transform-origin: 50%;
+}
+/*==============
+ 03.PRODUCTS
+================*/
 #products {
   display: flex;
   flex-direction: column;
@@ -221,13 +258,10 @@ nav ul li a {
   padding-top: 16px;
   text-align: left;
 }
-/* .sinlge-item-content {
-  padding-left: 20px;
-} */
 .single-item p {
   font-family: var(--other-font);
   font-weight: 700;
-  font-size: calc(10.9673px + 1vmin);
+  font-size: calc(8px + 1vmin);
   letter-spacing: 2px;
   line-height: 23px;
   color: var(--davys-grey);
@@ -249,7 +283,11 @@ nav ul li a {
 .star i:last-child {
   padding-right: 8px;
 }
+/*==============
+ 04.SUPPORT
+================*/
 #support h1{
+  font-size: calc(30px + 1vmin);
   text-transform: capitalize;
   margin: 30px 0;
 }
@@ -257,7 +295,7 @@ nav ul li a {
   justify-content: center;
 }
 #support i{
-  font-size: calc(20px + 5vmin);
+  font-size: calc(20px + 4vmin);
   color: var(--medium-blue);
 }
 #support .single-item{
@@ -272,10 +310,11 @@ nav ul li a {
 }
 #support p{
   font-size: calc(10px + 1vmin) !important;
-  /* color: red; */
   font-weight: 400;
 }
-
+/*==============
+ 05.FOOTER
+================*/
 footer {
   display: flex;
   align-items: center;
@@ -301,9 +340,10 @@ footer p:nth-child(3) {
 }
 footer p:nth-child(3) {
   color: var(--davys-grey);
+  margin-bottom: 5px;
 }
 .social-icon a {
-  background-color: rgba(255, 255, 255, 0.116);
+  background-color: rgba(255, 255, 255, 0.1);
   width: 40px;
   height: 40px;
   text-align: center;
@@ -317,4 +357,13 @@ footer p:nth-child(3) {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  transition: var(--transform);
+  -webkit-transition: var(--transform);
+  -moz-transition: var(--transform);
+  -ms-transition: var(--transform);
+  -o-transition: var(--transform);
+}
+.social-icon a:hover{
+  color:#01000e;
+  background-color: var(--white);
 }

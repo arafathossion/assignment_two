@@ -5,22 +5,19 @@
     align-items: center;
     grid-template-columns: calc(100% - 85%) calc(100% - 22%) calc(100% - 93%);
   }
-  .brand-logo{
+  .brand-logo {
     order: 2;
     text-align: center;
   }
-  .fa-cart-plus{
-    order: 3;
+  nav {
+    order: 1;
+    flex-direction: column;
+    justify-content: center;
   }
   .nav-toggler-icon {
     display: block;
     cursor: pointer;
     color: var(--dark-gray);
-  }
-  nav{
-    order: 1;
-    flex-direction: column;
-    justify-content: center;
   }
   nav ul {
     z-index: 10;
@@ -46,8 +43,10 @@
   #nav-toggler:checked ~ ul {
     opacity: 1;
   }
+  .fa-cart-plus {
+    order: 3;
+  }
   #banner {
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
   }
@@ -64,41 +63,36 @@
   }
   .banner-right img:nth-child(1) {
     width: 80%;
-    height: auto;
     margin: auto;
     display: block;
   }
   .banner-right img:nth-child(2) {
-    /* left: ; */
     width: 70%;
+    top: 15%;
+    left: 10%;
   }
-  #products .btn{
+  #products .btn {
     align-self: center !important;
     margin: 30px 0 20px 0;
   }
   .item-3 {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, auto);
-    grid-gap: 30px 30px;
   }
-  #support h1{
+  #support h1 {
     text-align: center;
   }
-  #support .item-3{
+  #support .item-3 {
     grid-template-rows: repeat(2, auto);
     margin-bottom: 30px;
   }
 }
 @media (max-width: 480px) {
-  h1{
+  h1 {
     font-size: calc(28px + 1vmin);
   }
-  h4{
+  h4 {
     font-size: calc(20px + 1vmin);
-  }
-  #support h1{
-    text-align: center;
   }
   #banner {
     display: grid;
@@ -120,9 +114,11 @@
     height: auto;
   }
   .banner-right img:nth-child(2) {
-    width: 90%;
+    width: 80%;
+    top: 15%;
+  left: 5%;
   }
-  #products .btn{
+  #products .btn {
     align-self: center !important;
     margin: 30px 20px 20px 0;
   }
@@ -132,7 +128,10 @@
     grid-template-rows: repeat(9, auto);
     grid-gap: 30px 30px;
   }
-  #support .item-3{
+  #support h1 {
+    text-align: center;
+  }
+  #support .item-3 {
     grid-template-rows: repeat(3, auto);
     margin-bottom: 30px;
   }
