@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
+  scroll-behavior: smooth
 }
 /* Main Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
@@ -113,6 +114,7 @@ nav ul li a {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: auto;
+  margin: 20px 0;
 }
 .banner-left {
   padding-left: 20px;
@@ -124,7 +126,7 @@ nav ul li a {
   padding: 16px 300px 16px 0;
   line-height: 24px;
 }
-.banner-left a {
+.btn a {
   text-transform: capitalize;
   background-color: #e02c6d;
   font-family: var(--main-font);
@@ -147,12 +149,12 @@ nav ul li a {
   -ms-transition: var(--transform);
   -o-transition: var(--transform);
 }
-.banner-left a:hover {
+.btn a:hover {
   border: 1px solid #e02c6d;
   background-color: var(--white);
   color: #e02c6d;
 }
-.banner-left i {
+.btn i {
   transition: var(--transform);
   font-size: 14.5px;
   color: var(--white);
@@ -161,7 +163,7 @@ nav ul li a {
   -ms-transition: var(--transform);
   -o-transition: var(--transform);
 }
-.banner-left a:hover i {
+.btn a:hover i {
   color: #e02c6d;
 }
 .banner-right {
@@ -185,8 +187,14 @@ nav ul li a {
   -o-transform: translate(-50%, -50%);
 }
 
-/* #products {
-} */
+#products {
+  display: flex;
+  flex-direction: column;
+}
+#products .btn{
+  align-self: flex-end;
+  margin: 20px 0 20px auto;
+}
 .item-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -241,9 +249,33 @@ nav ul li a {
 .star i:last-child {
   padding-right: 8px;
 }
-/* #sing-up{
-    background-color: aqua;
-} */
+#support h1{
+  text-transform: capitalize;
+  margin: 30px 0;
+}
+#support .star{
+  justify-content: center;
+}
+#support i{
+  font-size: calc(20px + 5vmin);
+  color: var(--medium-blue);
+}
+#support .single-item{
+  text-align: center;
+  padding: 60px 30px;
+}
+#support h3{
+  padding: 10px 0;
+  color: var(--dark-gray);
+  font-family: var(--main-font);
+  font-weight: 600;
+}
+#support p{
+  font-size: calc(10px + 1vmin) !important;
+  /* color: red; */
+  font-weight: 400;
+}
+
 footer {
   display: flex;
   align-items: center;
